@@ -1,6 +1,5 @@
-// 
 function appendOnWebPage(data) {
-    console.log(data.length);
+
     let container = document.getElementById("list");
     container.innerHTML = "";
 
@@ -8,7 +7,6 @@ function appendOnWebPage(data) {
         let obj = data[i];
 
         let listItem = document.createElement("tr");
-        console.log(listItem);
         // inner content
         let td1 = `<td><img src="${obj.image}"> ${obj.name}</td>`;
         let td2 = `<td>${obj.symbol}</td>`;
@@ -24,6 +22,27 @@ function appendOnWebPage(data) {
         //Adding to web-page
         container.append(listItem);
     }
+}
+
+
+let allData;
+
+function sortByMktCap() {
+    appendOnWebPage(allData.sort((a, b) => {return a.market_cap - b.market_cap}));
+}
+
+function sortByPercentage() {
+    appendOnWebPage(allData.sort((a, b) => {return a.price_change_percentage_24h - b.price_change_percentage_24h}));
+}
+
+//Action listener for search bar
+
+let searchBar = document.getElementById("search_input");
+searchBar.addEventListener('change', search());
+
+function search() {
+    let str = searchBar.value;
+    console.log(str);
 }
 
 
@@ -45,11 +64,3 @@ response.then((data) => {
         console.log(message);
     });
 });
-
-let allData;
-function sortByMktCap() {
-    appendOnWebPage(allData.sort((a, b) => {return a.market_cap - b.market_cap}));
-}
-function sortByPercentage() {
-    appendOnWebPage(allData.sort((a, b) => {return a.price_change_percentage_24h - b.price_change_percentage_24h}));
-}

@@ -36,18 +36,18 @@
 
 td {
     border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding: 20px 0px;
-    width: 150px;
-    vertical-align: middle;
+    margin-bottom: 20px !important;
+    padding: 20px 0px !important;
+    width: 150px !important;
+    vertical-align: middle !important;
 }
 
 tr :nth-child(6) {
-    width: 200px;
-    text-align: end;
+    width: 200px !important;
+    text-align: end !important;
 }
 tr :nth-child(2) {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 
 img {
@@ -56,9 +56,9 @@ img {
 }
 
 .green {
-    color: rgb(84, 215, 84);
+    color: rgb(84, 215, 84) !important;
 }
 
 .red {
-    color: red;
+    color: red !important;
 }
