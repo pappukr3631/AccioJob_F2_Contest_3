@@ -14,3 +14,14 @@
     display: flex;
     justify-content: center;
 }
+
+td {
+    color: white;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    padding: 20px 0px;
+}
+
+img {
+    height: 20px;
+}
