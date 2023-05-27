@@ -8,18 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="searchBar">
-        <input type="text">
-        <button>Sort By Mkt Cap</button>
-        <button>Sort by percentage</button>
-    </div>
-    <div id="table">
-        <!-- <ul style="list-style: none;" id="list">
-            
-        </ul> -->
-        <table id="list">
-            
-        </table>
+    <div id="container">
+        <div id="searchBar">
+            <input type="text" placeholder="Search By Name or Symbol">
+            <button onclick="sortByMktCap()">Sort By Mkt Cap</button>
+            <button onclick="sortByPercentage()">Sort by percentage</button>
+        </div>
+        <div id="table">
+            <!-- <ul style="list-style: none;" id="list">
+                
+            </ul> -->
+            <table id="list">
+                
+            </table>
+        </div>
     </div>
 
     <script src="script.js"></script>

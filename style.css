@@ -3,11 +3,30 @@
     color: white;
 }
 
+#container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #searchBar {
     margin-top: 100px;
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+#searchBar input,button {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+#searchBar input {
+    width: 38%;
+}
+
+#searchBar button {
+    width: 12%;
 }
 
 #table {
@@ -16,12 +35,30 @@
 }
 
 td {
-    color: white;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ddd;
     margin-bottom: 20px;
     padding: 20px 0px;
+    width: 150px;
+    vertical-align: middle;
+}
+
+tr :nth-child(6) {
+    width: 200px;
+    text-align: end;
+}
+tr :nth-child(2) {
+    text-transform: uppercase;
 }
 
 img {
     height: 20px;
+    width: 20px !important;
+}
+
+.green {
+    color: rgb(84, 215, 84);
+}
+
+.red {
+    color: red;
 }
