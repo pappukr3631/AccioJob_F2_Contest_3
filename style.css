@@ -10,7 +10,8 @@
 }
 
 #searchBar {
-    margin-top: 100px;
+    margin-top: 60px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -22,11 +23,11 @@
 }
 
 #searchBar input {
-    width: 38%;
+    width: 32%;
 }
 
 #searchBar button {
-    width: 12%;
+    width: 10%;
 }
 
 #table {

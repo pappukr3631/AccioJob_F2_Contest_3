@@ -38,11 +38,20 @@ function sortByPercentage() {
 //Action listener for search bar
 
 let searchBar = document.getElementById("search_input");
-searchBar.addEventListener('change', search());
+// searchBar.addEventListener('change', search());
 
 function search() {
-    let str = searchBar.value;
-    console.log(str);
+    let searchValue = searchBar.value;
+    console.log(searchValue);
+    let list = [];
+    for(let i=0; i<allData.length; i++) {
+        if(allData[i].name.toLowerCase().search(searchValue.toLowerCase()) == 0 || allData[i].symbol == searchValue.toLowerCase()) {
+            list.unshift(allData[i]);
+        }else {
+            list.push(allData[i]);
+        }
+    }
+    appendOnWebPage(list);
 }
 
 
@@ -54,10 +63,8 @@ response.then((data) => {
     let prom = data.json();
 
     prom.then((arr) => {
-        // console.log(arr);
         appendOnWebPage(arr);
         allData = arr;//making it available in global context
-        // console.log("after");
     });
 
     prom.catch((message) => {
